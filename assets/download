@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <div
+      class="d-flex flex-column justify-content-between flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow"
+    >
+      <h5 class="my-0 font-weight-normal">Squeak!</h5>
+
+      <form
+        class="d-flex align-items-lg-stretch gap-3"
+        method="POST"
+        action="/squeak"
+      >
+        <div
+          class="bg-light d-flex justify-content-center align-items-center border p-2"
+          id="username"
+        >
+          User
+        </div>
+        <input
+          type="text"
+          name="squeakContent"
+          id="squeakContent"
+          style="margin-right: 10px; width: 400px"
+          minlength="10"
+          required
+        />
+        <button type="submit" class="btn btn-primary">Squeak</button>
+      </form>
+
+      <button type="submit" class="btn btn-primary" onclick="logout()">
+        Sign out
+      </button>
+    </div>
+    <div class="container">
+      <div id="squeaks"></div>
+    </div>
+    <script src="js/home.js"></script>
+  </body>
+</html>
